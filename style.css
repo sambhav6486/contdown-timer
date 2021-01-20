@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+      background: url("./images/image1.jpg");
+      background-size: cover;
+      background-position: center;
+      display:flex;
+      flex-direction: column;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Fredoka One', cursive;
+      color: rgb(54, 9, 28);
+  }
+  .heading{
+      font-size: 4rem;
+  }
+  .timer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 3rem;
+  }
