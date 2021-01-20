@@ -4,17 +4,16 @@ const minutesEl = document.querySelector("#minutes")
 const secondsEL = document.querySelector("#seconds")
 
 
-
+setInterval(countdownTimer , 1000)
 function countdownTimer(){
     let currentDate = new Date()
-    let newYearsDate = new Date("1 Jan 2022")
+    let newYear = currentDate.getFullYear() + 1
+    let newYearsDate = new Date(`1 Jan ${newYear}`)
     let diffDate = newYearsDate -currentDate
     setSectonds(diffDate)
 
 }
 
-
-setInterval(countdownTimer , 1000)
 
 function setSectonds(miliseconds){
     let totalseconds = Math.floor(miliseconds / 1000)
