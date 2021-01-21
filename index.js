@@ -18,7 +18,8 @@ function countdownTimer(){
 function setSectonds(miliseconds){
     let totalseconds = Math.floor(miliseconds / 1000)
     let seconds = totalseconds % 60
-    secondsEL.innerText = formatTime(seconds);
+    let newSeconds = formatTime(seconds);
+    updateCounter(secondsEL , newSeconds)
     setMinutes(totalseconds)
     setHours(totalseconds)
     setDays(totalseconds)
@@ -26,19 +27,25 @@ function setSectonds(miliseconds){
 
 function setMinutes(secondsValue){
     let minutes = Math.floor(secondsValue / 60) % 60
-    minutesEl.innerText = formatTime(minutes);
+    let newminutes = formatTime(minutes);
+    updateCounter(minutesEl , newminutes)
 }
 
 function setHours(hoursValue){
     let hours = Math.floor(hoursValue / 60 / 60) % 60
-    hoursEl.innerText = formatTime(hours);
+    let newHours = formatTime(hours);
+    updateCounter(hoursEl , newHours)
 }
 
 function setDays(daysValue){
     let days = Math.floor(daysValue / 60 / 60 / 24)
-    daysEl.innerText = formatTime(days);
+    let newDays = formatTime(days);
+    updateCounter(daysEl , newDays)
 }
 
+function updateCounter(element , newTime){
+    element.innerText = newTime
+}
 
 function formatTime(time){
     if(time<10){
